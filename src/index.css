@@ -44,7 +44,11 @@ body{
 
 
 /* progress bar styles */
-
+.progress-bar{
+  height: 4px;
+  background-color: var(--error);
+  margin-top: 25px;
+}
 
 /* image grid styles */
 
