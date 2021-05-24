@@ -4,7 +4,7 @@ import { projectStorage } from "../database/config";
 
 const Storing = (file) => {
 
-    const [progess, setProgess] = useState(0);
+    const [progress, setProgress] = useState(0);
     const [error, setError] = useState(null);
     const [url, setUrl] = useState(null);
 
@@ -16,7 +16,7 @@ const Storing = (file) => {
             'state_changed',
             (snap) => {
                 let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
-                setProgess(percentage);
+                setProgress(percentage);
             },
             (err) => {
                 setError(err);
@@ -28,7 +28,7 @@ const Storing = (file) => {
         )
     }, [file])
 
-    return { progess, url, error }
+    return { progress, url, error }
 }
 
 export default Storing;
