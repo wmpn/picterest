@@ -4,6 +4,8 @@
   --primary: #efb6b2;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
+  --logo:#bb1414;
+  --logolight:#da81bf;
 }
 
 /* base styles & title */
@@ -16,10 +18,16 @@ body{
   margin: 0 auto;
 }
 .title h1{
-  color: var(--primary);
+  color: var(--logolight);
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
+  font-weight: 700;
+}
+.title h1 span{
+  color: var(--logo);
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 .title h2, .title p{
   text-align: center;
