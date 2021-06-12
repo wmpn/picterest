@@ -41,7 +41,17 @@ body{
 }
 
 /* upload form styles */
-
+form label{
+  display: block;
+  width: fit-content;
+  font-size: 60px;
+  color: var(--logo);
+  border: 2px solid var(--logo);
+  border-radius: 50%;
+  line-height: .7;
+  padding: 15px 20px;
+  margin: 40px auto;
+}
 
 /* progress bar styles */
 .progress-bar{
