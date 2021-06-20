@@ -25,6 +25,7 @@ const Storing = (file) => {
             async () => {
                 const url = await storageRef.getDownloadURL();
                 const createdAt = timestamp();
+                console.log(createdAt);
                 collectionRef.add({ url, createdAt }); //url used as a shortened form for url(object's property name)= url(values from above const)
                 setUrl(url);
             }
