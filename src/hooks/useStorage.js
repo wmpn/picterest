@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { projectStorage } from "../database/config";
+import { projectStorage, projectFirestore, timestamp } from "../database/config";
 
 
 const Storing = (file) => {
@@ -11,6 +11,7 @@ const Storing = (file) => {
     useEffect(() => {
         //references
         const storageRef = projectStorage.ref(file.name);
+        const collectionRef = projectFirestore.collection('images');
 
         storageRef.put(file).on(
             'state_changed',
@@ -23,6 +24,8 @@ const Storing = (file) => {
             },
             async () => {
                 const url = await storageRef.getDownloadURL();
+                const createdAt = timestamp();
+                collectionRef.add({ url, createdAt }); //url used as a shortened form for url(object's property name)= url(values from above const)
                 setUrl(url);
             }
         )
