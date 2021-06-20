@@ -1,6 +1,16 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import "firebase/storage";
+
+// const admin = require("firebase-admin");
+
+// var serviceAccount = require("picterest-web-app-firebase-adminsdk-a1f03-f08f262899.json");
+
+// admin.initializeApp({
+//     credential: admin.credential.cert(serviceAccount),
+//     databaseURL: "https://picterest-web-app-default-rtdb.firebaseio.com"
+// });
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyDgHQP2CDoHfMfKLinw2iKi85rick-SWAo",
